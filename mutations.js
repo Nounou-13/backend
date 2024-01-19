@@ -2,6 +2,7 @@
 
 const { session } = require('./neo4j');
 
+///////////////////////////////////////////////////////////////////Airport//////////////////////////////////////////////////////////////////////
 const addAirport = async (_, { name }, { session }) => {
     try {
       const result = await session.run('CREATE (a:Airport { name: $name }) RETURN a', { name });

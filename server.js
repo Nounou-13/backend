@@ -19,11 +19,10 @@ const typeDefs = gql`
     addTicket(ticketClass: String!, price: Float!, flightDate: String!): Ticket
       updateTicket(
         ticketClass: String!
-        ticketPrice: Float!  # Nouveau paramètre pour utiliser le prix comme critère de recherche
+        ticketPrice: Float!  
         newTicketClass: String
         newPrice: Float
-      ): Ticket
-    
+      ): Ticket    
     deleteTicket(ticketClass: String!, ticketPrice: Float!): Boolean
   }
 
